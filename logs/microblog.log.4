@@ -1,0 +1,96 @@
+2022-12-23 23:54:43,115 Exception on /login [GET] [in /home/doug/.cache/pypoetry/virtualenvs/microblog-AGPS-rU7-py3.10/lib/python3.10/site-packages/flask/app.py:1741]
+Traceback (most recent call last):
+  File "/home/doug/.cache/pypoetry/virtualenvs/microblog-AGPS-rU7-py3.10/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/doug/.cache/pypoetry/virtualenvs/microblog-AGPS-rU7-py3.10/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/doug/.cache/pypoetry/virtualenvs/microblog-AGPS-rU7-py3.10/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/doug/.cache/pypoetry/virtualenvs/microblog-AGPS-rU7-py3.10/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/doug/Projetos/microblog/app/routes.py", line 49, in login
+    return render_template('login.html', title='Sign In', form=form)
+  File "/home/doug/.cache/pypoetry/virtualenvs/microblog-AGPS-rU7-py3.10/lib/python3.10/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/home/doug/.cache/pypoetry/virtualenvs/microblog-AGPS-rU7-py3.10/lib/python3.10/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/home/doug/.cache/pypoetry/virtualenvs/microblog-AGPS-rU7-py3.10/lib/python3.10/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/doug/.cache/pypoetry/virtualenvs/microblog-AGPS-rU7-py3.10/lib/python3.10/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/doug/Projetos/microblog/app/templates/login.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/doug/Projetos/microblog/app/templates/base.html", line 17, in top-level template code
+    <a href="{{ url_for('explore') }}">Explore</a>
+  File "/home/doug/.cache/pypoetry/virtualenvs/microblog-AGPS-rU7-py3.10/lib/python3.10/site-packages/flask/app.py", line 2031, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/doug/.cache/pypoetry/virtualenvs/microblog-AGPS-rU7-py3.10/lib/python3.10/site-packages/flask/app.py", line 2020, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/doug/.cache/pypoetry/virtualenvs/microblog-AGPS-rU7-py3.10/lib/python3.10/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'explore'. Did you mean 'edit_profile' instead?
+2022-12-23 23:54:46,830 Exception on /login [GET] [in /home/doug/.cache/pypoetry/virtualenvs/microblog-AGPS-rU7-py3.10/lib/python3.10/site-packages/flask/app.py:1741]
+Traceback (most recent call last):
+  File "/home/doug/.cache/pypoetry/virtualenvs/microblog-AGPS-rU7-py3.10/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/doug/.cache/pypoetry/virtualenvs/microblog-AGPS-rU7-py3.10/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/doug/.cache/pypoetry/virtualenvs/microblog-AGPS-rU7-py3.10/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/doug/.cache/pypoetry/virtualenvs/microblog-AGPS-rU7-py3.10/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/doug/Projetos/microblog/app/routes.py", line 49, in login
+    return render_template('login.html', title='Sign In', form=form)
+  File "/home/doug/.cache/pypoetry/virtualenvs/microblog-AGPS-rU7-py3.10/lib/python3.10/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/home/doug/.cache/pypoetry/virtualenvs/microblog-AGPS-rU7-py3.10/lib/python3.10/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/home/doug/.cache/pypoetry/virtualenvs/microblog-AGPS-rU7-py3.10/lib/python3.10/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/doug/.cache/pypoetry/virtualenvs/microblog-AGPS-rU7-py3.10/lib/python3.10/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/doug/Projetos/microblog/app/templates/login.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/doug/Projetos/microblog/app/templates/base.html", line 17, in top-level template code
+    <a href="{{ url_for('explore') }}">Explore</a>
+  File "/home/doug/.cache/pypoetry/virtualenvs/microblog-AGPS-rU7-py3.10/lib/python3.10/site-packages/flask/app.py", line 2031, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/doug/.cache/pypoetry/virtualenvs/microblog-AGPS-rU7-py3.10/lib/python3.10/site-packages/flask/app.py", line 2020, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/doug/.cache/pypoetry/virtualenvs/microblog-AGPS-rU7-py3.10/lib/python3.10/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'explore'. Did you mean 'edit_profile' instead?
+2022-12-23 23:58:23,517 Microblog statup [in /home/doug/Projetos/microblog/app/__init__.py:47]
+2022-12-23 23:58:27,962 Exception on /login [GET] [in /home/doug/.cache/pypoetry/virtualenvs/microblog-AGPS-rU7-py3.10/lib/python3.10/site-packages/flask/app.py:1741]
+Traceback (most recent call last):
+  File "/home/doug/.cache/pypoetry/virtualenvs/microblog-AGPS-rU7-py3.10/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/doug/.cache/pypoetry/virtualenvs/microblog-AGPS-rU7-py3.10/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/doug/.cache/pypoetry/virtualenvs/microblog-AGPS-rU7-py3.10/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/doug/.cache/pypoetry/virtualenvs/microblog-AGPS-rU7-py3.10/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/doug/Projetos/microblog/app/routes.py", line 49, in login
+    return render_template('login.html', title='Sign In', form=form)
+  File "/home/doug/.cache/pypoetry/virtualenvs/microblog-AGPS-rU7-py3.10/lib/python3.10/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/home/doug/.cache/pypoetry/virtualenvs/microblog-AGPS-rU7-py3.10/lib/python3.10/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/home/doug/.cache/pypoetry/virtualenvs/microblog-AGPS-rU7-py3.10/lib/python3.10/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/doug/.cache/pypoetry/virtualenvs/microblog-AGPS-rU7-py3.10/lib/python3.10/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/doug/Projetos/microblog/app/templates/login.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/doug/Projetos/microblog/app/templates/base.html", line 17, in top-level template code
+    <a href="{{ url_for('explore') }}">Explore</a>
+  File "/home/doug/.cache/pypoetry/virtualenvs/microblog-AGPS-rU7-py3.10/lib/python3.10/site-packages/flask/app.py", line 2031, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/doug/.cache/pypoetry/virtualenvs/microblog-AGPS-rU7-py3.10/lib/python3.10/site-packages/flask/app.py", line 2020, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/doug/.cache/pypoetry/virtualenvs/microblog-AGPS-rU7-py3.10/lib/python3.10/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'explore'. Did you mean 'edit_profile' instead?
+2022-12-24 00:01:35,652 Microblog statup [in /home/doug/Projetos/microblog/app/__init__.py:47]
+2022-12-24 00:01:38,818 Microblog statup [in /home/doug/Projetos/microblog/app/__init__.py:47]

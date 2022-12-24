@@ -1,12 +1,4 @@
-2022-12-18 20:47:53,468 Microblog statup [in /home/doug/Projetos/microblog/app/__init__.py:47]
-2022-12-18 21:08:45,214 Microblog statup [in /home/doug/Projetos/microblog/app/__init__.py:47]
-2022-12-18 21:09:00,005 Microblog statup [in /home/doug/Projetos/microblog/app/__init__.py:47]
-2022-12-18 22:18:48,009 Microblog statup [in /home/doug/Projetos/microblog/app/__init__.py:47]
-2022-12-18 22:20:46,562 Microblog statup [in /home/doug/Projetos/microblog/app/__init__.py:47]
-2022-12-18 22:27:35,923 Microblog statup [in /home/doug/Projetos/microblog/app/__init__.py:47]
-2022-12-18 23:33:14,438 Microblog statup [in /home/doug/Projetos/microblog/app/__init__.py:47]
-2022-12-18 23:33:21,488 Microblog statup [in /home/doug/Projetos/microblog/app/__init__.py:47]
-2022-12-18 23:33:27,409 Exception on /user/duoglas [GET] [in /home/doug/.cache/pypoetry/virtualenvs/microblog-AGPS-rU7-py3.10/lib/python3.10/site-packages/flask/app.py:1741]
+2022-12-24 01:05:40,720 Exception on /index [GET] [in /home/doug/.cache/pypoetry/virtualenvs/microblog-AGPS-rU7-py3.10/lib/python3.10/site-packages/flask/app.py:1741]
 Traceback (most recent call last):
   File "/home/doug/.cache/pypoetry/virtualenvs/microblog-AGPS-rU7-py3.10/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
     response = self.full_dispatch_request()
@@ -18,10 +10,10 @@ Traceback (most recent call last):
     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
   File "/home/doug/.cache/pypoetry/virtualenvs/microblog-AGPS-rU7-py3.10/lib/python3.10/site-packages/flask_login/utils.py", line 290, in decorated_view
     return current_app.ensure_sync(func)(*args, **kwargs)
-  File "/home/doug/Projetos/microblog/app/routes.py", line 85, in user
-    return render_template('user.html', user=user, posts=posts, form=form)
-NameError: name 'form' is not defined
-2022-12-18 23:33:39,238 Exception on /user/duoglas [GET] [in /home/doug/.cache/pypoetry/virtualenvs/microblog-AGPS-rU7-py3.10/lib/python3.10/site-packages/flask/app.py:1741]
+  File "/home/doug/Projetos/microblog/app/routes.py", line 31, in index
+    page=page, per_page=app.config['POSTS_PER_PAGE'], error_out=False)
+KeyError: 'POSTS_PER_PAGE'
+2022-12-24 01:05:44,907 Exception on /explore [GET] [in /home/doug/.cache/pypoetry/virtualenvs/microblog-AGPS-rU7-py3.10/lib/python3.10/site-packages/flask/app.py:1741]
 Traceback (most recent call last):
   File "/home/doug/.cache/pypoetry/virtualenvs/microblog-AGPS-rU7-py3.10/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
     response = self.full_dispatch_request()
@@ -33,71 +25,9 @@ Traceback (most recent call last):
     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
   File "/home/doug/.cache/pypoetry/virtualenvs/microblog-AGPS-rU7-py3.10/lib/python3.10/site-packages/flask_login/utils.py", line 290, in decorated_view
     return current_app.ensure_sync(func)(*args, **kwargs)
-  File "/home/doug/Projetos/microblog/app/routes.py", line 85, in user
-    return render_template('user.html', user=user, posts=posts, form=form)
-NameError: name 'form' is not defined
-2022-12-18 23:33:56,651 Exception on /user/doug [GET] [in /home/doug/.cache/pypoetry/virtualenvs/microblog-AGPS-rU7-py3.10/lib/python3.10/site-packages/flask/app.py:1741]
-Traceback (most recent call last):
-  File "/home/doug/.cache/pypoetry/virtualenvs/microblog-AGPS-rU7-py3.10/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/doug/.cache/pypoetry/virtualenvs/microblog-AGPS-rU7-py3.10/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/doug/.cache/pypoetry/virtualenvs/microblog-AGPS-rU7-py3.10/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/doug/.cache/pypoetry/virtualenvs/microblog-AGPS-rU7-py3.10/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-  File "/home/doug/.cache/pypoetry/virtualenvs/microblog-AGPS-rU7-py3.10/lib/python3.10/site-packages/flask_login/utils.py", line 290, in decorated_view
-    return current_app.ensure_sync(func)(*args, **kwargs)
-  File "/home/doug/Projetos/microblog/app/routes.py", line 85, in user
-    return render_template('user.html', user=user, posts=posts, form=form)
-NameError: name 'form' is not defined
-2022-12-18 23:34:05,129 Exception on /user/doug [GET] [in /home/doug/.cache/pypoetry/virtualenvs/microblog-AGPS-rU7-py3.10/lib/python3.10/site-packages/flask/app.py:1741]
-Traceback (most recent call last):
-  File "/home/doug/.cache/pypoetry/virtualenvs/microblog-AGPS-rU7-py3.10/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/doug/.cache/pypoetry/virtualenvs/microblog-AGPS-rU7-py3.10/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/doug/.cache/pypoetry/virtualenvs/microblog-AGPS-rU7-py3.10/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/doug/.cache/pypoetry/virtualenvs/microblog-AGPS-rU7-py3.10/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-  File "/home/doug/.cache/pypoetry/virtualenvs/microblog-AGPS-rU7-py3.10/lib/python3.10/site-packages/flask_login/utils.py", line 290, in decorated_view
-    return current_app.ensure_sync(func)(*args, **kwargs)
-  File "/home/doug/Projetos/microblog/app/routes.py", line 85, in user
-    return render_template('user.html', user=user, posts=posts, form=form)
-NameError: name 'form' is not defined
-2022-12-18 23:37:13,208 Microblog statup [in /home/doug/Projetos/microblog/app/__init__.py:47]
-2022-12-18 23:37:17,031 Exception on /user/doug [GET] [in /home/doug/.cache/pypoetry/virtualenvs/microblog-AGPS-rU7-py3.10/lib/python3.10/site-packages/flask/app.py:1741]
-Traceback (most recent call last):
-  File "/home/doug/.cache/pypoetry/virtualenvs/microblog-AGPS-rU7-py3.10/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/doug/.cache/pypoetry/virtualenvs/microblog-AGPS-rU7-py3.10/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/doug/.cache/pypoetry/virtualenvs/microblog-AGPS-rU7-py3.10/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/doug/.cache/pypoetry/virtualenvs/microblog-AGPS-rU7-py3.10/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-  File "/home/doug/.cache/pypoetry/virtualenvs/microblog-AGPS-rU7-py3.10/lib/python3.10/site-packages/flask_login/utils.py", line 290, in decorated_view
-    return current_app.ensure_sync(func)(*args, **kwargs)
-  File "/home/doug/Projetos/microblog/app/routes.py", line 85, in user
-    return render_template('user.html', user=user, posts=posts, form=form)
-NameError: name 'form' is not defined
-2022-12-18 23:37:20,527 Exception on /user/doug [GET] [in /home/doug/.cache/pypoetry/virtualenvs/microblog-AGPS-rU7-py3.10/lib/python3.10/site-packages/flask/app.py:1741]
-Traceback (most recent call last):
-  File "/home/doug/.cache/pypoetry/virtualenvs/microblog-AGPS-rU7-py3.10/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/doug/.cache/pypoetry/virtualenvs/microblog-AGPS-rU7-py3.10/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/doug/.cache/pypoetry/virtualenvs/microblog-AGPS-rU7-py3.10/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/doug/.cache/pypoetry/virtualenvs/microblog-AGPS-rU7-py3.10/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-  File "/home/doug/.cache/pypoetry/virtualenvs/microblog-AGPS-rU7-py3.10/lib/python3.10/site-packages/flask_login/utils.py", line 290, in decorated_view
-    return current_app.ensure_sync(func)(*args, **kwargs)
-  File "/home/doug/Projetos/microblog/app/routes.py", line 85, in user
-    return render_template('user.html', user=user, posts=posts, form=form)
-NameError: name 'form' is not defined
-2022-12-18 23:39:21,879 Microblog statup [in /home/doug/Projetos/microblog/app/__init__.py:47]
-2022-12-18 23:42:36,569 Microblog statup [in /home/doug/Projetos/microblog/app/__init__.py:47]
-2022-12-18 23:42:41,391 Microblog statup [in /home/doug/Projetos/microblog/app/__init__.py:47]
-2022-12-18 23:43:27,481 Microblog statup [in /home/doug/Projetos/microblog/app/__init__.py:47]
+  File "/home/doug/Projetos/microblog/app/routes.py", line 46, in explore
+    page=page, per_page=app.config['POSTS_PER_PAGE'], error_out=False)
+KeyError: 'POSTS_PER_PAGE'
+2022-12-24 01:10:28,941 Microblog statup [in /home/doug/Projetos/microblog/app/__init__.py:47]
+2022-12-24 01:14:06,839 Microblog statup [in /home/doug/Projetos/microblog/app/__init__.py:47]
+2022-12-24 01:15:27,362 Microblog statup [in /home/doug/Projetos/microblog/app/__init__.py:47]
